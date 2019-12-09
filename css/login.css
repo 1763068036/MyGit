@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/*login界面的scss*/
+.margin {
+  width: 1203px;
+  margin: 0 auto; }
+
+#login .top {
+  height: 120px; }
+  #login .top img {
+    margin: 20px 0 0 34px; }
+
+#login .main {
+  height: 543px;
+  overflow: hidden; }
+  #login .main .left {
+    float: left;
+    width: 640px;
+    height: 542px; }
+  #login .main .login-bar {
+    float: right;
+    width: 392px;
+    height: 542px;
+    margin-right: 75px; }
+    #login .main .login-bar h2 {
+      font: 24px/32px "";
+      text-align: center;
+      margin: 0 0 30px 0; }
+    #login .main .login-bar p {
+      text-align: center;
+      overflow: hidden; }
+      #login .main .login-bar p span {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        cursor: pointer;
+        font: 16px/35px "";
+        border-bottom: 2px solid #ddd; }
+        #login .main .login-bar p span.on {
+          color: red;
+          border-bottom: 2px solid red; }
+    #login .main .login-bar .box1 form input {
+      display: block;
+      width: 346px;
+      height: 48px;
+      border: 1px solid #e4e4e4;
+      margin: 30px 0;
+      padding: 0 10px 0 33px;
+      border-radius: 4px;
+      background: url(../imags/ia_100000007.png) 5px 10px no-repeat; }
+      #login .main .login-bar .box1 form input.pass {
+        margin: 0;
+        background-position: 0 -54px; }
+    #login .main .login-bar .box1 .re {
+      width: 392px;
+      height: 170px;
+      vertical-align: middle;
+      font: 14px/20px "";
+      margin-top: 20px;
+      overflow: hidden; }
+      #login .main .login-bar .box1 .re .rem {
+        float: left; }
+      #login .main .login-bar .box1 .re .unrem {
+        float: right; }
+        #login .main .login-bar .box1 .re .unrem a {
+          color: #167cd3; }
+    #login .main .login-bar .box1 .login {
+      display: block;
+      width: 251px;
+      height: 63px;
+      background: #DB252B;
+      margin: 60px auto;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font: 26px/63px "微软雅黑";
+      border-radius: 6px; }
+    #login .main .login-bar .box2 {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around; }
+      #login .main .login-bar .box2 .img1 {
+        margin: 0 20px;
+        width: 160px;
+        height: 160px; }
+      #login .main .login-bar .box2 .img2 {
+        width: 132px;
+        height: 196px;
+        margin: 0 20px; }
+      #login .main .login-bar .box2 p {
+        color: red;
+        margin: 30px 0; }
+    #login .main .login-bar .bottom a {
+      color: #167cd3; }
+
+#login .footer {
+  margin-top: 30px;
+  overflow: hidden;
+  color: #666; }
+  #login .footer .footer-t {
+    height: 60px;
+    border-top: 1px #f4f4f4 solid;
+    border-bottom: 1px #f4f4f4 solid;
+    overflow: hidden; }
+    #login .footer .footer-t .left {
+      float: left;
+      font: 14px/60px ""; }
+      #login .footer .footer-t .left a {
+        padding: 0 10px;
+        border-right: 1px #cccccc solid;
+        color: #666; }
+        #login .footer .footer-t .left a:hover {
+          color: red; }
+      #login .footer .footer-t .left em {
+        margin-left: 20px; }
+    #login .footer .footer-t .right {
+      float: right; }
+      #login .footer .footer-t .right img {
+        padding-right: 75px; }
+  #login .footer .footer-b {
+    margin-top: 10px; }
+    #login .footer .footer-b p {
+      font: 12px/2 ""; }

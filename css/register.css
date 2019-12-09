@@ -1,0 +1,132 @@
+.margin {
+  width: 1203px;
+  margin: 0 auto; }
+
+#top .margin {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  color: #666766; }
+  #top .margin .left {
+    display: flex;
+    width: 400px;
+    height: 120px; }
+    #top .margin .left h1 {
+      font: 24px/120px ""; }
+    #top .margin .left img {
+      width: 232px;
+      height: 120px; }
+  #top .margin .right {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 120px; }
+    #top .margin .right h4 {
+      font: 16px/120px "";
+      margin-right: 20px; }
+    #top .margin .right input {
+      display: block;
+      width: 103px;
+      height: 44px;
+      color: #fff;
+      font: 16px/44px "";
+      text-align: center;
+      background: red;
+      border: 0;
+      border-radius: 6px;
+      margin-right: 40px; 
+      cursor: pointer;}
+
+#main {
+  width: 100%;
+  height: 600px;
+  background: url(../imags/reg.jpg);
+  background-position: center center; }
+  #main .box {
+    float: right;
+    width: 360px;
+    height: 600px;
+    margin: 27px 300px 60px 0; }
+    #main .box form {
+      width: 360px;
+      padding: 50px 0 40px 40px;
+      font-size: 14px;
+      color: #666;
+      background: #fff;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
+      #main .box form ul li {
+        margin-bottom: 25px;
+        line-height: 32px;
+        position: relative;
+        overflow: hidden; }
+        #main .box form ul li.last input {
+          margin-top: 6px;
+          width: 325px;
+          height: 40px;
+          border: 1px #DE494D solid;
+          border-radius: 4px;
+          background: #EF545A;
+          color: #fff;
+          font: 15px/40px ""; }
+        #main .box form ul li .drag {
+          position: relative;
+          width: 324px;
+          height: 34px;
+          background-color: #e8e8e8;
+          line-height: 34px;
+          text-align: center;
+          border-radius: 20px; }
+          #main .box form ul li .drag .drag-bg {
+            background-color: #7ac23c;
+            height: 34px; }
+          #main .box form ul li .drag .drag-text {
+            position: absolute;
+            top: 0px;
+            width: 300px; }
+          #main .box form ul li .drag .handle {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 40px;
+            height: 32px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            cursor: move; }
+        #main .box form ul li label {
+          width: 100px;
+          height: 32px;
+          float: left; }
+        #main .box form ul li input {
+          width: 200px;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 10px;
+          border: 1px #cccccc solid;
+          border-radius: 4px; }
+          #main .box form ul li input.last {
+            width: 60px; }
+        #main .box form ul li .passwordStrength {
+          display: flex;
+          justify-content: space-between;
+          width: 218px;
+          height: 22px;
+          margin: 5px 0 0 103px; }
+          #main .box form ul li .passwordStrength span {
+            width: 66px;
+            height: 20px;
+            text-align: center;
+            font: 12px/20px "";
+            color: #fff;
+            background: #eaeaea;
+            transition: background 0.5s; }
+        #main .box form ul li button {
+          width: 120px;
+          height: 32px;
+          color: #fff;
+          outline: none;
+          border: 0;
+          border-radius: 4px;
+          background: #ddd;
+          cursor: not-allowed;
+          vertical-align: bottom;
+          margin-left: 15px; }
