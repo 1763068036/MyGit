@@ -104,7 +104,55 @@ class Qrcode{
 }
 new Qrcode;
 
-//
+//登录后的变化
+class Index{
+	
+	constructor(){
+		
+		this.user = document.querySelector("#topbar .topbar-left .username");
+		//console.log(this.user);
+		this.lg = document.querySelector("#topbar .topbar-left .lg");
+		this.zc = document.querySelector("#topbar .topbar-left .zc");
+		this.tc = document.querySelector("#topbar .topbar-left .tc");
+		this.cs = document.querySelector("#sign-in .box .denglu p");
+		this.lg2 = document.querySelector("#sign-in .box .denglu .lg");
+		this.zc2 = document.querySelector("#sign-in .box .denglu .zc-c");
+		this.shop = document.querySelector("#sign-in .box .denglu a.shop");
+		this.getMsg();
+		this.addEvent();
+	}
+	addEvent(){
+		var that = this;
+		this.tc.onclick = function(){
+			that.msg[that.i].onoff = "0";
+			localStorage.setItem("userMsg",JSON.stringify(that.msg));
+			location.reload();
+		}
+	}
+	getMsg(){
+		this.msg = localStorage.getItem("userMsg") ? JSON.parse(localStorage.getItem("userMsg")) : [];
+		this.i = null; 
+		
+		var type = this.msg.some((val,idx)=>{
+			this.i = idx;
+			return val.onoff === 1;
+		})
+		if(type){
+			console.log(this.msg[this.i])
+			this.user.innerHTML = this.msg[this.i].user;
+			this.lg.style.display="none";
+			this.zc.style.display = "none";
+			this.lg2.style.display = "none";
+			this.zc2.style.display = "none";
+			this.tc.style.display = "block";
+			this.shop.style.display = "block";
+			this.cs.innerHTML = "用户"+this.msg[this.i].user;
+			
+		}
+	}
+}
+		
+new Index;
 
 
 

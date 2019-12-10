@@ -24,19 +24,23 @@
 				<!--<img src="imags/reg.jpg"/>-->
 				<div class="box">
 					<form action="" method="post">
-						<ul>
-							<li><label>用户名：</label><input type="text" placeholder="用户名长度为4-14字符"/><span></span></li>
+						<ul style="position: relative;">
+							<span class="sp_user"style="position:absolute;left: 100px;top: -20px;color: red;font-size: 12px;display: none;">hello</span>
+							<li><label>用户名：</label><input class="user" type="text" placeholder="用户名长度为4-8字符" autocomplete="off"/></li>
+							<span class="sp_pass"style="position:absolute;left: 100px;top: 44px;color: red;font-size: 12px;display: none;">hello</span>
 							<li>
 								<label>密码：</label>
-								<input type="password" placeholder="长度为6-16字符，不可为纯数字"/>
+								<input type="password" class="pass" placeholder="长度为6字符，不可为纯数字"autocomplete="off"/>
 								<div class="passwordStrength" id="passwordStrength">
 	                                <span class="" id="r">弱</span>
 	                                <span class="" id="z">中</span>
 	                                <span class="" id="q">强</span>
 	                            </div>
 							<span></span>
+							
 							</li>
-							<li><label>确认密码：</label><input type="password" placeholder="确认密码"/><span></span></li>
+							<span class="confirm_pass"style="position:absolute;left: 100px;top: 127px;color: red;font-size: 12px;display: block;">hello</span>
+							<li><label>确认密码：</label><input class="confirmPass" type="password" placeholder="确认密码"autocomplete="off"/><span></span></li>
 							<li><label>手机：</label><input type="text" placeholder="请输入手机号以获取验证码"/><span></span></li>
 							<li><label>验证码：</label><input class="last" type="text" /><span></span><button>获取验证码</button></li>
 							<li>
@@ -46,7 +50,8 @@
 									<div class="handle" style="left: 0px;"></div>
 								</div>
 							</li>
-							<li class="last"><input type="button" onclick="" value="注册"></li>
+							<li class="last"><input type="button" class="register" value="注册" style="cursor: pointer;"></li>
+							<li class="last_next" style="text-align: center;display: none;">恭喜你注册成功！<a href="login.html" style="color: #167CD3;">2s后跳转到登录</a></li>
 						</ul>
 							
 					</form>
@@ -57,4 +62,5 @@
 			
 		</div>
 	</body>
+	<script src="js/register.js"></script>
 </html>
