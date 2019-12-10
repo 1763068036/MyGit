@@ -31,11 +31,13 @@ class Login {
 				localStorage.setItem("userMsg",JSON.stringify(this.msg));
 				type = 1;
 			} else if(this.msg[i].user == this.u && this.msg[i].pass != this.p) {
+				this.span1.style.display="none";
 				this.span2.style.display="block";
 				this.span2.innerHTML = "密码错误，请重新输入";
 				type = 2;
 			}else if(this.msg[i].user != this.u && this.msg[i].pass == this.p){
 				this.span1.style.display="block";
+				this.span2.style.display="none";
 				this.span1.innerHTML = "用户名错误，请重新输入";
 				type = 3;
 			}else if(this.msg[i].user != this.u && this.msg[i].pass != this.p){

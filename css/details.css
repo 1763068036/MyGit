@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.margin {
+  width: 1200px;
+  margin: 0 auto; }
+
+#main {
+  overflow: hidden; }
+  #main .main-good-l {
+    width: 380px;
+    height: 460px;
+    float: left; }
+    #main .main-good-l .main-good-l-big {
+      position: relative;
+      width: 380px;
+      height: 380px; }
+      #main .main-good-l .main-good-l-big img {
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        display: none; }
+        #main .main-good-l .main-good-l-big img.first {
+          display: block; }
+    #main .main-good-l .main-good-l-small {
+      width: 380px;
+      height: 48px;
+      margin-top: 12px;
+      display: flex; }
+      #main .main-good-l .main-good-l-small li {
+        width: 64px;
+        height: 64px;
+        padding: 0 8px; }
+        #main .main-good-l .main-good-l-small li img {
+          width: 64px;
+          height: 64px; }
+  #main .main-good-r {
+    float: left;
+    width: 523px;
+    margin-left: 30px; }
+    #main .main-good-r h4 {
+      width: 420px;
+      height: 53px;
+      font: 700 16px/24px "微软雅黑";
+      margin-b: 15px; }
+    #main .main-good-r .main-good-r-amount {
+      width: 523px;
+      overflow: hidden;
+      text-align: center; }
+      #main .main-good-r .main-good-r-amount li {
+        float: left;
+        width: 170px;
+        font: 16px/55px "";
+        color: #333; }
+        #main .main-good-r .main-good-r-amount li p {
+          border: 1px solid #e5e5e5; }
+          #main .main-good-r .main-good-r-amount li p .b {
+            color: red; }
+    #main .main-good-r .main-good-r-cr {
+      height: 68px;
+      font: 16px/68px "微软雅黑";
+      padding-left: 70px;
+      margin-top: 20px; }
+      #main .main-good-r .main-good-r-cr p span {
+        font-size: 20px;
+        color: #c81623; }
+    #main .main-good-r .main-good-r-buy {
+      width: 510px;
+      margin-top: 15px;
+      background: #f7f9f7; }
+      #main .main-good-r .main-good-r-buy li {
+        overflow: hidden; }
+        #main .main-good-r .main-good-r-buy li b {
+          font: 16px/50px "";
+          display: inline-block;
+          float: left;
+          margin-left: 30px; }
+          #main .main-good-r .main-good-r-buy li b em {
+            color: red;
+            font: 700 24px/50px ""; }
+        #main .main-good-r .main-good-r-buy li input {
+          font: 20px/2 "";
+          text-align: center;
+          color: #fff;
+          float: right;
+          width: 150px;
+          background: red;
+          border: 0;
+          cursor: pointer; }
+      #main .main-good-r .main-good-r-buy ul {
+        font: 14px/56px "";
+        text-align: center;
+        display: flex; }
+        #main .main-good-r .main-good-r-buy ul li {
+          width: 170px;
+          text-align: center;
+          border-right: 1px solid #e1e1e1; }

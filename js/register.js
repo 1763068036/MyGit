@@ -95,8 +95,6 @@ class Register{
 new Register;
 
 //USER验证。
-
-
 function checkUser(str){
 	var reg  = /^[a-zA-Z0-9_\u2E80-\u9FFF]{6,8}$/;
 	if(str.match(reg)){
@@ -106,7 +104,6 @@ function checkUser(str){
 		return false;
 	}
 }
-
 //密码验证
 function checkPass(str){
 	var reg = /^[0-9]{6}$/;
@@ -117,7 +114,6 @@ function checkPass(str){
 	}
 }
 //确认密码
-
 function confirmPass(str1,str2){
 	if(str1 == str2){
 		return true;
@@ -125,9 +121,6 @@ function confirmPass(str1,str2){
 		return false;
 	}
 }
-
-
-
 //验证手机号码是否符合
 function checkMobilePhone(str){
     if (str.match(/^(?:13\d|15[89])-?\d{5}(\d{3}|\*{3})$/) == null) {
