@@ -1,0 +1,116 @@
+.margin{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#list .top{
+	height: 50px;
+	font: 20px/50px "";
+	background: #c81623;
+}
+#list ul{
+	overflow: hidden;
+    width: 1000px;
+    height: 1200px;
+    margin: 0 auto;
+}
+.goods li {
+    padding: 5px 8px 0;
+    float: left;
+    margin: 20px 8px 0 0;
+    width: 276px;
+    height: 360px;
+    border: 1px #eee solid;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+.goodshow, .goodshow img {
+    position: relative;
+    width: 276px;
+    height: 276px;
+}
+* {
+    outline: 0;
+}
+
+span.table-goods {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    z-index: 1;
+}
+
+a {
+    
+    color: #333;
+}
+.goodshow, .goodshow img {
+    position: relative;
+    width: 276px;
+    height: 276px;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+.goods p {
+    height: 28px;
+    line-height: 28px;
+    margin-top: 6px;
+}
+.goo_shade {
+    position: absolute;
+    padding: 0 10px;
+    top: 242px;
+    left: 0;
+    height: 28px;
+    line-height: 28px;
+    width: 256px;
+    color: #fff;
+    background: #000;
+    filter: alpha(opacity=60);
+    -moz-opacity: .6;
+    opacity: .6;
+}
+.goo_shadel {
+    float: left;
+}
+.goo_shader {
+    float: right;
+}
+.goo_title {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    width: 276px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.price {
+    float: left;
+}
+.iwant {
+    float: right;
+    display: block;
+    width: 75px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: #e20606;
+    background-image: linear-gradient(#f54d4d,#ce2929);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+em{
+	float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #c81623;
+}

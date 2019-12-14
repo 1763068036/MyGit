@@ -181,6 +181,7 @@ nav .nav-l {
 	height: 528px;
 	color: #fff;
 	background: #c81623;
+	z-index: 99;
 }
 
 nav .nav-l h4 {
@@ -334,8 +335,10 @@ nav .nav-c li {
 	float: left;
 	width: 125px;
 }
-nav .nav-c li:hover{
-	background: #9f0004;;
+
+nav .nav-c li:hover {
+	background: #9f0004;
+	;
 }
 
 nav .nav-c li a {
@@ -360,8 +363,21 @@ nav .nav-c li a i.jr {
 #banner {
 	width: 100%;
 	height: 480px;
-	background: url(../imags/banner.jpg) no-repeat center;
+	position: absolute;
+	
 }
+#banner .imgbox{
+	width: 100%;
+	height: 480px;
+	
+}
+#banner .imgbox img{
+	width: 100%;
+	height: 480px;
+	
+}
+
+
 
 #sign-in {
 	width: 1203px;
@@ -454,15 +470,15 @@ nav .nav-c li a i.jr {
 	color: #333;
 }
 
-
-
-
 #process {
 	margin-top: 100px;
 }
 
 #process .top {
-	margin: 10px 0;
+	margin: 50px 0;
+}
+#process .top img{
+	margin-top: 50px;
 }
 
 #process .bottom {
@@ -702,156 +718,245 @@ nav .nav-c li a i.jr {
 }
 
 #main .Trend {
-  margin-top: 35px; }
-  #main .Trend .Trend-top {
-    height: 52px;
-    background: url(../imags/t1.png) no-repeat left;
-    line-height: 52px;
-    font-weight: 700; }
-    #main .Trend .Trend-top span {
-      float: left;
-      font-size: 20px;
-      margin-left: 88px;
-      color: #fff; }
-    #main .Trend .Trend-top .Trend-nav {
-      float: right; }
-      #main .Trend .Trend-top .Trend-nav a {
-        float: left;
-        font-size: 18px;
-        color: #555;
-        padding: 0 20px;
-        font-weight: 100;
-        cursor: pointer; }
-      #main .Trend .Trend-top .Trend-nav a.on {
-      		color: #fe1360;
-      		font-weight: 700;
-      		background: url(../imags/xiajian.png) no-repeat bottom center;
-        }
-  #main .Trend .Trend-cont ul {
-    overflow: hidden; }
-    #main .Trend .Trend-cont ul li {
-      float: left;
-      width: 216px;
-      height: 286px;
-      text-align: center;
-      border: 1px solid #e7e7e7;
-      padding: 6px;
-      margin: 5px;
-      position: relative; }
-      #main .Trend .Trend-cont ul li:hover {
-      	transition: .5s;
-        border-color: red; }
-     #main .Trend .Trend-cont ul .te img:hover {
-      	
-      	transform: none;
-        }
-        #main .Trend .Trend-cont ul li:hover img {
-          transform: scale(1.05);  
-          margin: 0 auto;
-          transition: .5s; }
-        #main .Trend .Trend-cont ul li:hover h4 {
-          color: #CF000E; }
-      #main .Trend .Trend-cont ul li.te {
-        width: 458px;
-        border: 0;
-        margin-left: 0;
-        padding-left: 0; }
-        #main .Trend .Trend-cont ul li.te img {
-          width: 458px;
-          height: 286px; }
-      #main .Trend .Trend-cont ul li a {
-        display: block;
-        width: 216px;
-        height: 206px;
-        margin: 0; }
-        #main .Trend .Trend-cont ul li a img {
-          width: 100%;
-          height: 100%; }
-      #main .Trend .Trend-cont ul li h4 {
-        margin-top: 10px;
-        font: 14px/30px "";
-        color: #333; }
-      #main .Trend .Trend-cont ul li p {
-        width: 216px;
-        height: 40px;
-        font: 14px/40px "";
-        display: flex; }
-        #main .Trend .Trend-cont ul li p .xianjia {
-          display: block;
-          float: left;
-          font: 700 20px/2 "";
-          color: #c81623; }
-        #main .Trend .Trend-cont ul li p .yuanjia {
-          display: block;
-          float: left;
-          margin-left: 30px;
-          text-decoration: line-through; }
-        #main .Trend .Trend-cont ul li p em {
-          display: block;
-          float: right;
-          width: 20px;
-          height: 20px;
-          margin: 8px 0 0 36px;
-          background: url(../imags/tb.png) no-repeat; }
-      #main .Trend .Trend-cont ul li i {
-        display: inline-block;
-        width: 25px;
-        height: 37px;
-        font-size: 13px;
-        color: #fff;
-        position: absolute;
-        top: 6px;
-        left: 0;
-        background: url(../imags/rm.png) no-repeat; }
+	margin-top: 35px;
+}
 
-  #main .Home .Trend-top {
-    height: 52px;
-    background: url(../imags/home1.png) no-repeat left;
-    line-height: 52px;
-    font-weight: 700; }
-    
-#main .Home .Trend-top .Trend-nav a.on{
+#main .Trend .Trend-top {
+	height: 52px;
+	background: url(../imags/t1.png) no-repeat left;
+	line-height: 52px;
+	font-weight: 700;
+}
+
+#main .Trend .Trend-top span {
+	float: left;
+	font-size: 20px;
+	margin-left: 88px;
+	color: #fff;
+}
+
+#main .Trend .Trend-top .Trend-nav {
+	float: right;
+}
+
+#main .Trend .Trend-top .Trend-nav a {
+	float: left;
+	font-size: 18px;
+	color: #555;
+	padding: 0 20px;
+	font-weight: 100;
+	cursor: pointer;
+}
+
+#main .Trend .Trend-top .Trend-nav a.on {
+	color: #fe1360;
+	font-weight: 700;
+	background: url(../imags/xiajian.png) no-repeat bottom center;
+}
+
+#main .Trend .Trend-cont ul {
+	overflow: hidden;
+}
+
+#main .Trend .Trend-cont ul li {
+	float: left;
+	width: 216px;
+	height: 286px;
+	text-align: center;
+	border: 1px solid #e7e7e7;
+	padding: 6px;
+	margin: 5px;
+	position: relative;
+}
+
+#main .Trend .Trend-cont ul li:hover {
+	transition: .5s;
+	border-color: red;
+}
+
+#main .Trend .Trend-cont ul .te img:hover {
+	transform: none;
+}
+
+#main .Trend .Trend-cont ul li:hover img {
+	transform: scale(1.05);
+	margin: 0 auto;
+	transition: .5s;
+}
+
+#main .Trend .Trend-cont ul li:hover h4 {
+	color: #CF000E;
+}
+
+#main .Trend .Trend-cont ul li.te {
+	width: 458px;
+	border: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#main .Trend .Trend-cont ul li.te img {
+	width: 458px;
+	height: 286px;
+}
+
+#main .Trend .Trend-cont ul li a {
+	display: block;
+	width: 216px;
+	height: 206px;
+	margin: 0;
+}
+
+#main .Trend .Trend-cont ul li a img {
+	width: 100%;
+	height: 100%;
+}
+
+#main .Trend .Trend-cont ul li h4 {
+	margin-top: 10px;
+	font: 14px/30px "";
+	color: #333;
+}
+
+#main .Trend .Trend-cont ul li p {
+	width: 216px;
+	height: 40px;
+	font: 14px/40px "";
+	display: flex;
+}
+
+#main .Trend .Trend-cont ul li p .xianjia {
+	display: block;
+	float: left;
+	font: 700 20px/2 "";
+	color: #c81623;
+}
+
+#main .Trend .Trend-cont ul li p .yuanjia {
+	display: block;
+	float: left;
+	margin-left: 30px;
+	text-decoration: line-through;
+}
+
+#main .Trend .Trend-cont ul li p em {
+	display: block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	margin: 8px 0 0 36px;
+	background: url(../imags/tb.png) no-repeat;
+}
+
+#main .Trend .Trend-cont ul li i {
+	display: inline-block;
+	width: 25px;
+	height: 37px;
+	font-size: 13px;
+	color: #fff;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	background: url(../imags/rm.png) no-repeat;
+}
+
+#main .Home .Trend-top {
+	height: 52px;
+	background: url(../imags/home1.png) no-repeat left;
+	line-height: 52px;
+	font-weight: 700;
+}
+
+#main .Home .Trend-top .Trend-nav a.on {
 	color: #feb12a;
 	font-weight: 700;
 	background: url(../imags/xiajian2.png) no-repeat bottom center;
 }
+
 footer {
-  background: #eeeded;;
-  height: 440px; }
-  footer ul {
-    overflow: hidden; }
-    footer ul li {
-      float: left;
-      width: 200px;
-      margin-left: 100px; }
-      footer ul li .top {
-        margin: 37px 0 10px 0; }
-        footer ul li .top img {
-          
-          margin-left: 10px; }
-      footer ul li dl dt {
-        font: 14px/32px "";
-        color: #333; }
-      footer ul li dl dd {
-        font: 12px/2 "";
-        color: #949494; }
-      footer ul li dl dd:hover a{
-      	color: red;
-      }
-      footer ul li dl dt:hover a{
-      	color: red;
-      }
-  footer .footer-b {
-    margin-top: 37px;
-    text-align: center; }
-    footer .footer-b p {
-      font: 12px/2 ""; }
-      footer .footer-b p a {
-        color: #333; }
-      footer .footer-b p span {
-        color: #9c9c9c;
-        margin: 0 11px; }
-  footer .foot-img {
-    margin-top: 15px; }
-    footer .foot-img img {
-      margin: 0 16px; }
+	background: #eeeded;
+	;
+	height: 440px;
+}
+
+footer ul {
+	overflow: hidden;
+}
+
+footer ul li {
+	float: left;
+	width: 200px;
+	margin-left: 100px;
+}
+
+footer ul li .top {
+	margin: 37px 0 10px 0;
+}
+
+footer ul li .top img {
+	margin-left: 10px;
+}
+
+footer ul li dl dt {
+	font: 14px/32px "";
+	color: #333;
+}
+
+footer ul li dl dd {
+	font: 12px/2 "";
+	color: #949494;
+}
+
+footer ul li dl dd:hover a {
+	color: red;
+}
+
+footer ul li dl dt:hover a {
+	color: red;
+}
+
+footer .footer-b {
+	margin-top: 37px;
+	text-align: center;
+}
+
+footer .footer-b p {
+	font: 12px/2 "";
+}
+
+footer .footer-b p a {
+	color: #333;
+}
+
+footer .footer-b p span {
+	color: #9c9c9c;
+	margin: 0 11px;
+}
+
+footer .foot-img {
+	margin-top: 15px;
+}
+
+footer .foot-img img {
+	margin: 0 16px;
+}
+
+#lc .nav{
+    width: 80px;
+    height: 150px;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+  	background: #b6b6b6;
+  	opacity: .6;
+
+}
+#lc .nav li{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-top: 1px solid #b6b6b6;
+}

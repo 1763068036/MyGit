@@ -5,6 +5,37 @@
 		<title>微薄利首页</title>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script>
+	        onload = function(){
+	            // 获取元素
+	            var otop = document.querySelector("#lc .b");
+	            var otopbar = document.querySelector("#topbar");
+	            // 获取元素的初始top
+	            var otopT = otopbar.offsetTop;
+	            // 滚动事件
+	            onscroll = function(){
+	                // 滚动时获取实时的滚动距离
+	                var scrollT = document.documentElement.scrollTop
+	                // 将滚动距离和初始top相加，再设置回去
+	                otop.style.top = otopT + scrollT + "px";
+	            }	
+	            var t;
+	            // 点击元素时
+	            otop.onclick = function(){
+	                // 清除并开启计时器
+	                clearInterval(t);
+	                t = setInterval(function(){
+	                    // 如果距离定位的位置小于0了，清除计时器
+	                    if(document.documentElement.scrollTop <= 0){
+	                        clearInterval(t);
+	                    }else{
+	                        // 否则减少距离顶部的距离
+	                        document.documentElement.scrollTop-=200;
+	                    }
+	                }, 30);
+	            }
+	        }	    
+	    </script>
 	</head>
 	<body>
 		<div id="topbar">
@@ -38,10 +69,8 @@
 		</div>
 		<header>
 			<div class="margin">
-				<div class="logo">
-					
-					<a href=""><img src="imags/logo.png"/></a>
-					
+				<div class="logo">	
+					<a href=""><img src="imags/logo.png"/></a>	
 				</div>
 				<div class="search">
 					<form action="http://ls.vboly.com/web/vblgoods/goodsform.htm" method="get">
@@ -112,10 +141,10 @@
 		            <div class="denglu">
 		                <h2>Hi!欢迎来到微薄利</h2>
 		                <img src="imags/8.png"/>
-		                <p style="color: #80BDFF;font: 14px/20px '微软雅黑';">您还未登录哦！</p>
+		                <p style="color: red;font:700 14px/20px '微软雅黑';margin: 10px 0;">您还未登录哦！</p>
 		                <a class="lg" href="login.html" >登录</a>
 		                <a class="zc-c" href="register.html">注册</a>
-		                <a href="#" class="shop" style="display:none;width: 130px;height: 35px;color:#fff;border-radius:6px;background: red;font:14px/35px '';cursor:point;margin: 0 auto;">我的购物车</a>
+		                <a href="shop.html" class="shop" style="display:none;width: 130px;height: 35px;color:#fff;border-radius:6px;background: red;font:14px/35px '';cursor:point;margin: 0 auto;">我的购物车</a>
 		            </div>
 		            <div class="notice-box">
 		                <div class="notice-head">
@@ -177,7 +206,15 @@
         	</div>
         </section>
       
-		<section id="banner"></section>
+		<section id="banner" class="banner2 box">
+			<div class="imgbox">
+				<img src="imags/banner4.jpg"/>
+				<img src="imags/banner1.jpg"/>
+				<img src="imags/banner2.jpg"/>
+				<img src="imags/banner3.jpg"/>	
+			</div>
+			
+		</section>
 		
 		<section id="process">
 			<div class="margin">
@@ -189,8 +226,8 @@
 						<a href="https://ls.vboly.com/web/vblgoods/form.htm"><img src="imags/p1.png"/></a>
 					</div>
 					<div class="b-center">
-						<div class="b-center-c">
-							<ul>
+						<div class="b-center-c" style="position: relative;">
+							<ul style="position: absolute;">
 								<li class="clone">
 									<a href="#"title="【限时抢购】秋装纯色长袖t恤女" target="_blank">
 										<img src="imags/p7.png"/>
@@ -201,7 +238,6 @@
 										<div class="Speed-loa"></div>
 										<small>已抢<i class="jindu">0</i>%</small>
 									</div>
-									
 									
 									<div class="Rush-to-buy">
 										<h5>￥2.30</h5>
@@ -295,7 +331,7 @@
 							<img src="imags/pcl.png"/>
 						</span>
 					</div>
-					<div class="b-right">
+					<div class="b-right" style="position: relative;">
 						<ul class="b-right-t">
 							<li title="这是title" style="display: block;"><a href=""><img src="imags/pr1.jpg"/><span class="title over">【限时抢购】秋冬宽松高领毛衣女</span></a><p>新品预告</p></li>
 							<li title="这是title" style="display: none;"><a href=""><img src="imags/pr2.png"/><span class="title over">【限时抢购】秋冬宽松高领毛衣女</span></a><p>新品预告</p></li>
@@ -520,6 +556,52 @@
 				</div>
 			</div>
 		</footer>
+		
+		<div id="lc">
+			<ul class="nav">
+			    <li class="a">潮流穿搭</li>
+			    <li class="a">居家生活</li>
+			    <li class="b">回到顶部</li>
+			</ul>
+		</div>
 	</body>
+	<script src="js/jquery.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/jquery.banner.2.js"></script>
+	<script src="js/move.js"></script>
+	<script type="text/javascript">
+	
+		
+		$(".banner2").banner({
+			items:$(".banner2").find("img"),
+			left:$(".banner2").find("#left"),
+			right:$(".banner2").find("#right"),
+			list:true,
+			index:3,
+			autoPlay:true,
+			delayTime:4000,
+			moveTime:1000
+		});		
+		$("#lc .nav .a").click(function(){
+//			1获取点击元素的索引
+//			console.log($(this).index())
+			var i = $(this).index();
+//			2根据索引找到指定结构,获取距离顶部的位置
+			var t = $("#main .Trend").eq(i).offset().top;
+//			$(document).scrollTop(t);
+//			3配合动画方法,设置滚动距离
+			$("html").animate({
+				scrollTop:t
+			})
+		})
+	</script>
+	
+	<!--<script src="js/lb2.js"></script>-->
+	
+	
+	
+	
+	
+	
+	
 </html>

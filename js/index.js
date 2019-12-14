@@ -16,8 +16,7 @@ class Tion{
 			this.ali[i].onmouseenter = function(){
 				that.setActive(this);
 			}	
-		}
-		
+		}	
 	}
 	setActive(res){
 		this.index = res.index;
@@ -154,6 +153,74 @@ class Index{
 		
 new Index;
 
+//轮播
 
+class Lb{
+	constructor(){
+		
+		this.oul = document.querySelector(".b-center ul");
+		this.li = document.querySelectorAll(".b-center ul li");
+//		console.log(this.oul);
+		this.left = document.getElementsByClassName("b-center-pre")[0];
+		this.right = document.getElementsByClassName("b-center-nex")[0];
+		
+		//1-1.计算ul的宽度
+		this.oul.style.width = this.img.length * this.img[0].offsetWidth + "px";
+		//*1.要进来的
+		this.index = 0;
+//		*2.要走的
+		this.iPrev = this.li.length-1;
+//		2.开始绑定事件
+		this.addEvent();
+	}
+	addEvent(){
+		var that = this;
+//		绑定事件的功能
+		this.left.onclick = function(){
+//			3.开始计算索引
+			that.changeIndex(1)
+		}
+		this.right.onclick = function(){
+//			3.开始计算索引
+			that.changeIndex(-1)
+		}
+	}
+	changeIndex(d){
+		if(d == 1){
+	//		计算索引的功能
+			if(this.index == 0){
+				this.index = this.li.length-1;
+//				*3.设置要走的索引
+				this.iPrev = 0;
+			}else{
+				this.index--;
+//				*3.设置要走的索引
+				this.iPrev = this.index + 1;
+			}
+		}else{
+	//		计算索引的功能
+			if(this.index == this.li.length-1){
+				this.index = 0;
+//				*3.设置要走的索引
+				this.iPrev = this.li.length-1
+			}else{
+				this.index++;
+//				*3.设置要走的索引
+				this.iPrev = this.index - 1;
+			}
+		}
+//		4.根据索引显示当前
+		this.setActive(d);
+	}
+	setActive(d){
+		this.li[this.iPrev].style.left = 0;
+		move(this.li[this.iPrev],{left:this.li[0].offsetWidth * d});
+		move(this.oul,{})
+//		*5.根据要进来的索引,先设置初始位置,再开始进
+		this.li[this.index].style.left = -this.li[0].offsetWidth * d + "px";
+		move(this.li[this.index],{left:0});
+	}
+}
+new Lb;
 
 

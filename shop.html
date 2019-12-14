@@ -3,7 +3,63 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<style type="text/css">
+			.margin{
+				width: 1200px;
+				margin: 0 auto;
+			}
+			.top{
+				height: 50px;
+				font: 20px/50px "";
+				background: #c81623;
+			}
+			table{
+				text-align: center;
+			}
+			img{
+				width: 50px;
+				height: 50px;
+				margin: 0 auto;
+			}
+			th{
+				font: 16px/3 "";
+				color: #fff;
+				background: #c81623;
+			}
+			td{
+				font: 14px/2 "";
+			}
+			.price,.subtotal{
+				width: 50px;
+				color: #c81623;
+			}
+			
+		</style>
 	</head>
 	<body>
+		<div id="top">
+			<div class="margin">	
+				<div class="top">
+					<a href="list.html" style="color: yellow;font: 14px/20px '';">去商品列表</a>
+				</div>
+				<div class="main">
+					
+					<table border="1" bordercolor="#eee" cellspacing="0" cellpadding="0" width="1000" align="center">
+						<thead>
+							<tr><th><input class="checkall" checked="checked" type="checkbox" name="" id="" value="" />全选</th><th>图片</th><th>名称</th><th>价格</th><th>数量</th><th>小计</th><th>删除</th></tr>				
+						</thead>
+						<tbody>
+							<td colspan="5">购物车为空......<a href="list.html">去购物</a></td>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+		</div>
 	</body>
+	<script src="js/ajax.js"></script>
+	<script src="js/cookie.js"></script>
+	<script	src="js/shop.js"></script>
+	<script src="js/jquery.js"></script>
 </html>
